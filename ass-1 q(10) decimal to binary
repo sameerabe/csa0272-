@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int decimal, binary = 0, digit, place = 1;
+
+    printf("Enter a decimal number: ");
+    scanf("%d", &decimal);
+
+    while (decimal > 0) {
+        digit = decimal % 2;
+        binary += digit * place;
+        decimal /= 2;
+        place *= 10;
+    }
+
+    printf("Binary equivalent: %d", binary);
+
+    return 0;
+}
